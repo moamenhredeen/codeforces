@@ -1,0 +1,4 @@
+wrap_comments = true               # reflow long comment lines
+comment_width = 80                 # width to wrap at
+format_code_in_doc_comments = true # rustfmt the code inside ``` blocks
+normalize_doc_attributes = true    # #![doc = "..."]  ->  //! ...
