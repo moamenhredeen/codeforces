@@ -1,0 +1,10 @@
+[
+  {
+    "label": "cf: test current problem",
+    "command": "cargo test --bin $ZED_STEM"
+  },
+  {
+    "label": "cf: run current problem",
+    "command": "cargo run --quiet --bin $ZED_STEM"
+  }
+]

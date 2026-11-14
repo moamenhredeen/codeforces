@@ -1,0 +1,72 @@
+{
+  // Codeforces boilerplate. Name the file like `71a_way_too_long_words.rs`
+  // and the header/URL are filled in from the file name.
+  "Codeforces problem": {
+    "scope": "rust",
+    "prefix": "cf",
+    "description": "Codeforces solution: solve(input, out) + main + tests",
+    "body": [
+      "//! ${TM_FILENAME_BASE/^(\\d+)([a-z]\\d?)|_([a-z0-9])/$1${2:/upcase}${2:+ -}${3:+ }${3:/upcase}/g}",
+      "//!",
+      "//! Ref: https://codeforces.com/problemset/problem/${TM_FILENAME_BASE/^(\\d+)([a-z]\\d?).*/$1\\/${2:/upcase}/}",
+      "",
+      "use std::io::{self, BufRead, BufWriter, Write};",
+      "",
+      "pub fn solve<R: BufRead, W: Write>(mut input: R, mut out: W) {",
+      "    let mut s = String::new();",
+      "    input.read_to_string(&mut s).unwrap();",
+      "    let mut it = s.split_ascii_whitespace();",
+      "    let ${1:n}: ${2:usize} = it.next().unwrap().parse().unwrap();",
+      "    $0",
+      "}",
+      "",
+      "fn main() {",
+      "    let stdin = io::stdin();",
+      "    let stdout = io::stdout();",
+      "    solve(stdin.lock(), BufWriter::new(stdout.lock()));",
+      "}",
+      "",
+      "#[cfg(test)]",
+      "mod tests {",
+      "    use super::*;",
+      "",
+      "    fn run(input: &str) -> String {",
+      "        let mut out = Vec::new();",
+      "        solve(input.as_bytes(), &mut out);",
+      "        String::from_utf8(out).unwrap()",
+      "    }",
+      "",
+      "    #[test]",
+      "    fn test_case_1() {",
+      "        assert_eq!(run(\"${3:input}\\\\n\"), \"${4:output}\\\\n\");",
+      "    }",
+      "}",
+      ""
+    ]
+  },
+  "Codeforces test case": {
+    "scope": "rust",
+    "prefix": "cft",
+    "description": "Codeforces sample test case",
+    "body": [
+      "#[test]",
+      "fn ${1:test_case_2}() {",
+      "    assert_eq!(run(\"${2:input}\\\\n\"), \"${3:output}\\\\n\");",
+      "}"
+    ]
+  },
+  "Parse next token": {
+    "scope": "rust",
+    "prefix": "nx",
+    "description": "Parse next whitespace-separated token from `it`",
+    "body": ["let ${1:x}: ${2:i64} = it.next().unwrap().parse().unwrap();"]
+  },
+  "Parse next N tokens into Vec": {
+    "scope": "rust",
+    "prefix": "nxv",
+    "description": "Parse next N tokens from `it` into a Vec",
+    "body": [
+      "let ${1:a}: Vec<${2:i64}> = (0..${3:n}).map(|_| it.next().unwrap().parse().unwrap()).collect();"
+    ]
+  }
+}
