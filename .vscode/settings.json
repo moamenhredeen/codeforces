@@ -1,0 +1,16 @@
+{
+    "editor.formatOnSave": true,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "editor.lineNumbers": "off",
+    "editor.glyphMargin": false,
+    "editor.folding": false,
+    "editor.minimap.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    "chat.agent.enabled": false,
+    "terminal.integrated.tabs.enabled": false,
+    "terminal.integrated.stickyScroll.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "breadcrumbs.enabled": false,
+    "workbench.statusBar.visible": false
+}
