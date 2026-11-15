@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "codeforces"
+name = "kata"
 version = "0.1.0"
