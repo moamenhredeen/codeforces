@@ -1,0 +1,20 @@
+[book]
+title = "Kata"
+description = "Competitive programming solutions in Rust and C++"
+authors = ["Moamen Hraden"]
+language = "en"
+src = "docs"
+
+[build]
+build-dir = "book"
+
+[rust]
+edition = "2024"
+
+[output.html]
+site-url = "/kata/"
+git-repository-url = "https://github.com/moamenhredeen/kata"
+edit-url-template = "https://github.com/moamenhredeen/kata/edit/main/{path}"
+
+[output.html.playground]
+runnable = false
