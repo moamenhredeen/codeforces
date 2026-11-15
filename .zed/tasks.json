@@ -6,5 +6,9 @@
   {
     "label": "cf: run current problem",
     "command": "cargo run --quiet --bin $ZED_STEM"
+  },
+  {
+    "label": "cpp: run current file",
+    "command": "g++ -std=c++20 -O2 -Wall -Wextra -Wshadow -D_GLIBCXX_DEBUG \"$ZED_FILE\" -o cpp/build/$ZED_STEM.exe && ./cpp/build/$ZED_STEM.exe"
   }
 ]

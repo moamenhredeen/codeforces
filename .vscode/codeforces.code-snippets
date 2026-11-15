@@ -68,5 +68,30 @@
     "body": [
       "let ${1:a}: Vec<${2:i64}> = (0..${3:n}).map(|_| it.next().unwrap().parse().unwrap()).collect();"
     ]
+  },
+  // C++ boilerplate. Name the file like `112a_petya_and_strings.cpp`
+  // (a `cf_` prefix is fine too); header/URL are filled in from the file name.
+  "Codeforces problem (C++)": {
+    "scope": "cpp",
+    "prefix": "cf",
+    "description": "Codeforces solution: header + fast-IO main",
+    "body": [
+      "// ${TM_FILENAME_BASE/^(?:cf_)?(\\d+)([a-z]\\d?)|_([a-z0-9])/$1${2:/upcase}${2:+ -}${3:+ }${3:/upcase}/g}",
+      "//",
+      "// Ref: https://codeforces.com/problemset/problem/${TM_FILENAME_BASE/^(?:cf_)?(\\d+)([a-z]\\d?).*/$1\\/${2:/upcase}/}",
+      "",
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "  ios::sync_with_stdio(false);",
+      "  cin.tie(nullptr);",
+      "",
+      "  $0",
+      "",
+      "  return 0;",
+      "}",
+      ""
+    ]
   }
 }
