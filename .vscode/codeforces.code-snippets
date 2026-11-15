@@ -1,14 +1,14 @@
 {
-  // Codeforces boilerplate. Name the file like `71a_way_too_long_words.rs`
+  // Codeforces boilerplate. Name the file like `cf_71a_way_too_long_words.rs`
   // and the header/URL are filled in from the file name.
   "Codeforces problem": {
     "scope": "rust",
     "prefix": "cf",
     "description": "Codeforces solution: solve(input, out) + main + tests",
     "body": [
-      "//! ${TM_FILENAME_BASE/^(\\d+)([a-z]\\d?)|_([a-z0-9])/$1${2:/upcase}${2:+ -}${3:+ }${3:/upcase}/g}",
+      "//! ${TM_FILENAME_BASE/^(?:cf_)?(\\d+)([a-z]\\d?)|_([a-z0-9])/$1${2:/upcase}${2:+ -}${3:+ }${3:/upcase}/g}",
       "//!",
-      "//! Ref: https://codeforces.com/problemset/problem/${TM_FILENAME_BASE/^(\\d+)([a-z]\\d?).*/$1\\/${2:/upcase}/}",
+      "//! Ref: https://codeforces.com/problemset/problem/${TM_FILENAME_BASE/^(?:cf_)?(\\d+)([a-z]\\d?).*/$1\\/${2:/upcase}/}",
       "",
       "use std::io::{self, BufRead, BufWriter, Write};",
       "",
